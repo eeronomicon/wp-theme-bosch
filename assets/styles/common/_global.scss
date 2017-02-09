@@ -2,11 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
-	background: linear-gradient(270deg, #3e5773, #18a2f0, #e26932);
+    // background: linear-gradient(270deg, #3e5773, #18a2f0, #e26932);
+	background: linear-gradient(270deg, #7A98B8, #ADDFFA, #F2BAA2);
 	background-size: 600% 600%;
 	-webkit-animation: Background-gradient 60s ease infinite;
 	-moz-animation: Background-gradient 60s ease infinite;
 	animation: Background-gradient 60s ease infinite;
+}
+
+nav.navbar {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 @-webkit-keyframes Background-gradient {
