@@ -10,10 +10,17 @@ body {
 	animation: Background-gradient 60s ease infinite;
 }
 
-nav.navbar {
+.navbar {
     padding-left: 0px !important;
     padding-right: 0px !important;
+
+    a, a:hover, a:visited {
+        font-family: Montserrat;
+        font-size: $menu-item-paragraph-title;
+        text-transform: uppercase;
+    }
 }
+
 
 @-webkit-keyframes Background-gradient {
     0%{background-position:0% 50%}
