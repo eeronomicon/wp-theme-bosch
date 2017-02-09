@@ -1,7 +1,7 @@
 <header class="banner">
   <div class="container">
     <nav class="navbar">
-      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/InboundRx_Logo_Nav.png" alt="InboundRx"></a>
       <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
       </button>
