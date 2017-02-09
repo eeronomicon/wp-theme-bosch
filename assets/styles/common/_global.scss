@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+	background: linear-gradient(270deg, #3e5773, #18a2f0, #e26932);
+	background-size: 600% 600%;
+	-webkit-animation: Background-gradient 60s ease infinite;
+	-moz-animation: Background-gradient 60s ease infinite;
+	animation: Background-gradient 60s ease infinite;
+}
+
+@-webkit-keyframes Background-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Background-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Background-gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
