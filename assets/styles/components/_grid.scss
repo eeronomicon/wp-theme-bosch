@@ -15,57 +15,51 @@
   }
 }
 
-// Additional grid bits
+// Additional grid 
 .triptych-row {
   @include make-row;
- 
-  .triptych {
-    @include make-col-ready();
-    @include media-breakpoint-up(lg) {
-      @include make-col($sidebar-sm-columns);
-    }
+}
+
+.triptych {
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
   }
-  
-  .triptych-panel {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    margin-top: map-get($triptych, margin-top);
-    @include make-row;
-    @include make-col-ready();
-    @include media-breakpoint-up(xs) {
-      @include make-col(12);
-    }
-    @include media-breakpoint-down(md) {
-      margin-left: 0px;
-    }
-    max-width: map-get($triptych, width);
-    height: map-get($triptych, height);
-    // background-color: white;
+}
+
+@mixin triptych-panel {
+  margin-top: map-get($triptych, margin-top);
+  @include make-row;
+  @include make-col-ready(0);
+  @include media-breakpoint-up(xs) {
+    @include make-col(12);
   }
-  
-  .triptych-panel-left {
-    @extend .triptych-panel;
-    float: left;
+  @include media-breakpoint-down(md) {
     margin-left: 0px;
   }
+  max-width: map-get($triptych, width);
+  height: map-get($triptych, height);
+  // background-color: white;
+}
   
-  .triptych-panel-middle {
-    @extend .triptych-panel;
-    @include media-breakpoint-up(lg) {
-      float: none;
-      margin: map-get($triptych, margin-top) auto 0px auto;
-    }
+.triptych-panel-left {
+  @include triptych-panel;
+  float: left;
+  margin-left: 0px;
+}
+
+.triptych-panel-middle {
+  @include triptych-panel;
+  @include media-breakpoint-up(lg) {
+    float: none;
+    margin: map-get($triptych, margin-top) auto 0px auto;
   }
-  
-  .triptych-panel-right {
-    @extend .triptych-panel;
-    @include media-breakpoint-up(lg) {
-      float: right;
-      margin-right: 0px;
-    }
-  }
-  
-  .triptych-panel-title {
-    
+}
+
+.triptych-panel-right {
+  @include triptych-panel;
+  @include media-breakpoint-up(lg) {
+    float: right;
+    margin-right: 0px;
   }
 }
