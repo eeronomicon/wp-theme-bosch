@@ -24,5 +24,42 @@
     @include media-breakpoint-up(lg) {
       @include make-col($sidebar-sm-columns);
     }
-  } 
+  }
+  
+  .triptych-panel {
+    margin-top: 30px;
+    @include make-row;
+    @include make-col-ready();
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+    @include media-breakpoint-down(md) {
+      margin-left: 0px;
+    }
+    max-width: 300px;
+    height: 400px;
+    background-color: white;
+  }
+  
+  .triptych-panel-left {
+    @extend .triptych-panel;
+    float: left;
+    margin-left: 0px;
+  }
+  
+  .triptych-panel-middle {
+    @extend .triptych-panel;
+    @include media-breakpoint-up(lg) {
+      float: none;
+      margin: 30px auto 0px auto;
+    }
+  }
+  
+  .triptych-panel-right {
+    @extend .triptych-panel;
+    @include media-breakpoint-up(lg) {
+      float: right;
+      margin-right: 0px;
+    }
+  }
 }
