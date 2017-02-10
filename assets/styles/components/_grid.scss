@@ -63,3 +63,27 @@
     margin-right: 0px;
   }
 }
+
+.triptych-panel-title {
+  @include make-row(0);
+  @include make-col-ready();
+  @include make-col(12);;
+  background-color: white;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: $section-title;
+  line-height: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.triptych-panel-body {
+  @extend .triptych-panel-title;
+  padding-top: 15px;
+  font-family: Raleway;
+  font-size: $paragraph;
+  line-height: 1.2rem;
+  height: 340px;
+  border-radius: 5px;
+}
