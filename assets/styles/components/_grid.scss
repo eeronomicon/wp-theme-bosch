@@ -19,7 +19,7 @@
 .triptych-row {
   @include make-row;
  
- .triptych {
+  .triptych {
     @include make-col-ready();
     @include media-breakpoint-up(lg) {
       @include make-col($sidebar-sm-columns);
@@ -27,7 +27,9 @@
   }
   
   .triptych-panel {
-    margin-top: 30px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-top: map-get($triptych, margin-top);
     @include make-row;
     @include make-col-ready();
     @include media-breakpoint-up(xs) {
@@ -36,9 +38,9 @@
     @include media-breakpoint-down(md) {
       margin-left: 0px;
     }
-    max-width: 300px;
-    height: 400px;
-    background-color: white;
+    max-width: map-get($triptych, width);
+    height: map-get($triptych, height);
+    // background-color: white;
   }
   
   .triptych-panel-left {
@@ -51,7 +53,7 @@
     @extend .triptych-panel;
     @include media-breakpoint-up(lg) {
       float: none;
-      margin: 30px auto 0px auto;
+      margin: map-get($triptych, margin-top) auto 0px auto;
     }
   }
   
@@ -61,5 +63,9 @@
       float: right;
       margin-right: 0px;
     }
+  }
+  
+  .triptych-panel-title {
+    
   }
 }
