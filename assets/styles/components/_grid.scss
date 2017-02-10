@@ -14,3 +14,15 @@
     @include make-col($sidebar-sm-columns);
   }
 }
+
+// Additional grid bits
+.triptych-row {
+  @include make-row;
+ 
+ .triptych {
+    @include make-col-ready();
+    @include media-breakpoint-up(lg) {
+      @include make-col($sidebar-sm-columns);
+    }
+  } 
+}
