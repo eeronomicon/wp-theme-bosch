@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
+    padding-top: 30px;
     // background: linear-gradient(270deg, #3e5773, #18a2f0, #e26932);
 	background: linear-gradient(270deg, #7A98B8, #ADDFFA, #F2BAA2);
 	background-size: 600% 600%;
@@ -14,10 +15,14 @@ body {
     padding-left: 0px !important;
     padding-right: 0px !important;
 
-    a, a:hover, a:visited {
+    a, a:visited {
         font-family: Montserrat;
         font-size: $nav-menu-item;
         text-transform: uppercase;
+        
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
