@@ -29,6 +29,10 @@ get_template_part('templates/page', 'header'); ?>
                           <div class="triptych-panel-body" id="triptych-panel-<?php echo $panel_id; ?>">
                             <?php the_sub_field('triptych_panel_content'); ?>
                           </div>
+                          <?php if( get_sub_field('triptych_panel_image') ): ?>
+                            <div class="triptych-panel-body" id="triptych-panel-<?php echo $panel_id; ?>-image" style="display:none; background-image:url(<?php echo the_sub_field('triptych_panel_image'); ?>)">
+                            </div>
+                          <?php endif; ?>
                         </div>
                     </div>
         	    <?php endwhile; ?>
