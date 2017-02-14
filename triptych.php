@@ -16,9 +16,9 @@ get_template_part('templates/page', 'header'); ?>
 	           <?php while ( have_rows('triptych_panel') ) : the_row(); ?>
 	               <?php $panel_id++; ?>
                     <div class="triptych">
-                        <div class="<?php if ($panel_id % 3 == 1) {
+                        <div class="<?php if ($panel_id == 1) {
                             echo "triptych-panel-left";
-                        } elseif ($panel_id % 3 == 2) {
+                        } elseif ($panel_id == 2) {
                             echo "triptych-panel-middle";
                         } else {
                             echo "triptych-panel-right";
