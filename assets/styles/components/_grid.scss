@@ -37,7 +37,8 @@
   @include media-breakpoint-down(md) {
     margin-left: 0px;
   }
-  max-width: map-get($triptych, width);
+  width: map-get($triptych, width);
+  min-width: map-get($triptych, width);
   height: map-get($triptych, height);
 }
   
