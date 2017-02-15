@@ -3,6 +3,19 @@ $enable-flex:           true;
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 630px,
+  // Medium screen / tablet
+  md: 670px,
+  // Large screen / desktop
+  lg: 868px,
+  // Extra large screen / wide desktop
+  xl: 1950px
+) !default;
+
 // Colors
 $brand-primary:         #3E5773;
 $black:                 #000000;
@@ -14,14 +27,14 @@ $grey:                  #b5b5b5;
 
 // Font Sizes
 $nav-menu-item:         20px;
-$section-title:         30px;
+$section-title:         25px;
 $paragraph-title:       25px;
 $paragraph:             16px;
 
 // Triptych Panel Variables
 $triptych: (
     margin-top:         30px,
-    width:              320px,
+    width:              280px,
     height:             400px,
     height-title:       50px,
     title-body-gap:     15px
