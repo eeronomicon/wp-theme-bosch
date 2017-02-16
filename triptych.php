@@ -9,7 +9,9 @@ get_template_part('templates/page', 'header'); ?>
 
 <div id="primary">
 	<main id="main" class="site-main" role="main">
+	    <?php if( get_field('triptych_title') ): ?>
         <h2><?php the_field('triptych_title'); ?></h2>
+      <?php endif; ?>
 	    <?php if( have_rows('triptych_panel') ): ?>
 	       <?php $panel_id = 0; ?>
 	       <div class="triptych-row">
@@ -44,7 +46,7 @@ get_template_part('templates/page', 'header'); ?>
         <?php endif; ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php if ( get_the_content() ) { ?>
-            <div class="triptych-panel-title" style="margin-top:30px;"><?php echo the_title(); ?></div>
+            <div class="triptych-panel-title" style="margin-top:35px;"><?php echo the_title(); ?></div>
           <div class="triptych-panel-body" style="height:auto !important;">
               <?php the_content(); ?>
           </div>

@@ -72,14 +72,16 @@
   font-size: $font-size;
   background-color: white;
   border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.45);
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.45);
 }
 
 .triptych-panel-title {
   @include triptych-panel-content($section-title);
   font-family: Montserrat;
-  font-weight: bold;
   line-height: map-get($triptych, height-title);
-  height: map-get($triptych, height-title);
+  min-height: map-get($triptych, height-title);
   margin-bottom: map-get($triptych, title-body-gap);
 }
 
