@@ -70,7 +70,7 @@
   @include make-col-ready();
   @include make-col(12);
   font-size: $font-size;
-  background-color: white;
+  background-color: $white;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.45);
   -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.45);
