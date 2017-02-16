@@ -42,5 +42,13 @@ get_template_part('templates/page', 'header'); ?>
         	    <?php endwhile; ?>
            </div>
         <?php endif; ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <?php if ( get_the_content() ) { ?>
+            <h2><?php echo the_title(); ?></h2>
+          <div>
+              <?php the_content(); ?>
+          </div>
+          <?php }; ?>
+        <?php endwhile; endif; ?>
 	</main><!-- .site-main -->
 </div><!-- .content-area -->
