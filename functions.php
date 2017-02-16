@@ -145,9 +145,16 @@ acf_add_local_field_group(array (
 	'location' => array (
 		array (
 			array (
-				'param' => 'post_type',
+				'param' => 'page_template',
 				'operator' => '==',
-				'value' => 'page',
+				'value' => 'triptych.php',
+			),
+		),
+		array (
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'diptych.php',
 			),
 		),
 	),

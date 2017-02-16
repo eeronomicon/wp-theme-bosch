@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: Triptych
+ * Template Name: Diptych
  * @package WordPress
  * @subpackage Bosch
- * @since Bosch 0.1
+ * @since Bosch 0.6
  */
 get_template_part('templates/page', 'header'); ?>
 
@@ -15,7 +15,7 @@ get_template_part('templates/page', 'header'); ?>
 	    <?php if( have_rows('triptych_panel') ): ?>
 	       <?php $panel_id = 0; ?>
 	       <div class="triptych-row">
-	           <?php while ( have_rows('triptych_panel') && $panel_id <= 2 ) : the_row(); ?>
+	           <?php while ( have_rows('triptych_panel') ) : the_row(); ?>
 	               <?php $panel_id++; ?>
                     <div class="triptych">
                       <?php if( get_sub_field('triptych_panel_image') ) {
