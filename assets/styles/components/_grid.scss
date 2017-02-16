@@ -35,7 +35,8 @@
     @include make-col(12);
   }
   @include media-breakpoint-down(md) {
-    margin-left: 0px;
+    float: none;
+    margin: map-get($triptych, margin-top) auto 0px auto;
   }
   width: map-get($triptych, width);
   min-width: map-get($triptych, width);
