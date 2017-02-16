@@ -54,7 +54,7 @@
   }
   width: map-get($triptych, width);
   min-width: map-get($triptych, width);
-  height: map-get($triptych, height);
+  min-height: map-get($triptych, height);
 }
   
 .triptych-panel-left {
