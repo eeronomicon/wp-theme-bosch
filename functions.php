@@ -72,7 +72,7 @@ acf_add_local_field_group(array (
 			),
 			'collapsed' => '',
 			'min' => '',
-			'max' => 3,
+			'max' => '',
 			'layout' => 'table',
 			'button_label' => 'Add Row',
 			'sub_fields' => array (
