@@ -112,3 +112,8 @@
   line-height: 1.2rem;
   height: map-get($triptych, height) - map-get($triptych, height-title) - map-get($triptych, title-body-gap);
 }
+
+.triptych-panel-clickable {
+  cursor: pointer;
+  cursor: hand;
+}

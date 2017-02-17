@@ -4,7 +4,7 @@
 
 
    $('.triptych-panel-clickable').click(function() {
-      $( this).find('.triptych-panel-body').toggle();
+      $(this).parent().find('.triptych-panel-body').toggle();
     });
     
 
