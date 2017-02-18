@@ -113,7 +113,17 @@
   height: map-get($triptych, height) - map-get($triptych, height-title) - map-get($triptych, title-body-gap);
 }
 
-.triptych-panel-clickable {
+@mixin cursorable {
   cursor: pointer;
   cursor: hand;
+}
+
+.triptych-panel-clickable {
+  @include cursorable;
+}
+
+.triptych-panel-corner-lr {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
 }
