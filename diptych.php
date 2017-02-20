@@ -48,6 +48,11 @@ get_template_part('templates/page', 'header'); ?>
                       <?php the_sub_field('triptych_panel_title'); ?>
                     </div>
                     <div class="triptych-panel-body" id="triptych-panel-<?php echo $panel_id; ?>-content" style="display:<?php echo $panel_display[0]; ?>;">
+                      <div class="triptych-panel-corner-ll">
+                        <?php if( get_sub_field('triptych_panel_page_link') ): ?>
+                        <a href="<?php the_sub_field('triptych_panel_page_link'); ?>" class="btn btn-sm btn-info"><?php the_sub_field('triptych_panel_page_link_button'); ?></a>
+                        <?php endif; ?>
+                      </div>
                       <?php the_sub_field('triptych_panel_content'); ?>
                       <div class="triptych-panel-corner-lr">
                         <?php if( get_sub_field('triptych_panel_image') ): ?>
