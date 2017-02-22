@@ -31,16 +31,9 @@ get_template_part('templates/page', 'header'); ?>
                             } else {
                               echo "triptych-panel-right";
                             } ?>">
-                          <div class="triptych-panel-title">
-                            <?php the_sub_field('triptych_panel_title'); ?>
-                          </div>
-                          <div class="triptych-panel-body" id="triptych-panel-<?php echo $panel_id; ?>-content" style="display:<?php echo $panel_display[0]; ?>;">
                             
-                            <?php get_template_part('templates/content', 'panel'); ?>
+                          <?php include(locate_template('templates/content-panel.php')); ?>
 
-                          </div>
-                          <div class="triptych-panel-body <?php echo $panel_display[2]; ?>" id="triptych-panel-<?php echo $panel_id; ?>-image" style="display:<?php echo $panel_display[1]; ?>; background-image:url(<?php echo the_sub_field('triptych_panel_image'); ?>)">
-                          </div>
                         </div>
                     </div>
         	    <?php endwhile; ?>
